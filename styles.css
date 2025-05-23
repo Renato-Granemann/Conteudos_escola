@@ -1,73 +1,106 @@
-a:link {
-  color: blue;
-  background-color: transparent;
-  text-decoration: none;
+:root {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --primary-color: #4dabf7;
+    --hover-color: #82c7ff;
+    --border-color: #333333;
+    --disabled-color: #777777;
 }
 
-a:visited{
-  color: blue;
-  background-color: transparent;
-  text-decoration: none;
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-a:hover {
-  color: lightskyblue;
-  background-color: transparent;
-  text-decoration: underline;
+a:link, a:visited {
+    color: var(--primary-color);
+    background-color: transparent;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: var(--hover-color);
+    text-decoration: underline;
+    outline: none;
 }
 
 .sem-link {
-    color: gray;
+    color: var(--disabled-color);
     text-decoration: none;
     cursor: not-allowed;
     pointer-events: none;
 }
 
-.Imagem-calendario{
-  width: 10%;
-  margin-bottom: 10px;
+.Imagem-calendario {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
 }
 
-.Secao-3{
-  width: 100%;
-  border: 3px solid black;
-  align-content: center;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.Secao-2{
-  width: 100%;
-  border: 3px solid black;
-  align-content: center;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.Secao-1{
-  width: 100%;
-  border: 3px solid black;
-  align-content: center;
-  text-align: center;
+.Secao-1, .Secao-2, .Secao-3 {
+    width: 100%;
+    border: 3px solid var(--border-color);
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #1e1e1e;
+    border-radius: 8px;
 }
 
 .Conteudos {
     display: flex;
-    gap: 10px; 
+    gap: 10px;
     width: 95%;
-    margin: 0 auto;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
+    flex-wrap: wrap;
 }
 
-.Conteudos-FGB, .Conteudos-IF-CNT {
-    flex: 1;              
-    border: 1px solid black;  
-    padding: 10px; 
+.Conteudos-FGB, .Conteudos-IF {
+    flex: 1;
+    border: 1px solid var(--border-color);
+    padding: 10px;
     box-sizing: border-box;
     text-align: center;
+    min-width: 250px;
+    background-color: #292929;
+    border-radius: 6px;
 }
 
-.Conteudos-FGB p, .Conteudos-IF-CNT p {
-  text-align:left;
-  font-size: 20px;
+.Conteudos-FGB p, .Conteudos-IF p {
+    text-align: left;
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+.Links {
+    margin-top: 2rem;
+}
+
+.Github a {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+footer {
+    background-color: #636363;
+    color: var(--text-color);
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+
+address {
+    font-style: normal;
+    line-height: 1.5;
 }
