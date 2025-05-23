@@ -28,6 +28,13 @@ a:hover {
   margin-bottom: 10px;
 }
 
+.Secao-3{
+  width: 100%;
+  border: 3px solid black;
+  align-content: center;
+  text-align: center;
+  margin-top: 10px;
+}
 
 .Secao-2{
   width: 100%;
