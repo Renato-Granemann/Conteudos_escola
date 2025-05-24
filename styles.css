@@ -1,85 +1,122 @@
-:root {
-    --bg-color: #121212;
-    --text-color: #e0e0e0;
-    --primary-color: #4dabf7;
-    --hover-color: #82c7ff;
-    --border-color: #333333;
-}
-
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
+body{
+     background-color: #333333;
+    color: #e0e0e0;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-a:link, a:visited {
-    color: var(--primary-color);
-    background-color: transparent;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover, a:focus {
-    color: var(--hover-color);
-    text-decoration: underline;
-    outline: none;
-}
-
-.Imagem-calendario {
-    max-width: 200px;
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-}
-
-.Secao-1, .Secao-2, .Secao-3, .Secao-4 {
-    width: 100%;
-    border: 3px solid var(--border-color);
+.titulo {
     text-align: center;
-    margin-top: 10px;
-    padding: 10px;
-    box-sizing: border-box;
-    background-color: #1e1e1e;
-    border-radius: 8px;
 }
 
-.Conteudos {
-    display: flex;
-    gap: 10px;
-    width: 95%;
-    margin: 0 auto 20px auto;
-    flex-wrap: wrap;
+.piano {
+    position: relative;
+    width: 400px;
+    height: 362.5px;
 }
 
-.Conteudos-FGB, .Conteudos-IF {
-    flex: 1;
-    border: 1px solid var(--border-color);
-    padding: 10px;
-    box-sizing: border-box;
+.key {
+    position: absolute;
+    border: 1px solid black;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.white {
+    width: 60px;
+    height: 362.5px;
+    background: white;
+    z-index: 1;
+}
+
+.white:hover, .white.active { 
+    background-color: #ababab;
+}
+
+.black {
+    width: 30px;
+    height: 225px;
+    background: black;
+    z-index: 2;
+}
+
+.black:hover,
+.black.active { /* Adiciona a classe .active para o efeito de clique */
+    background-color: #555;
+}
+
+.nota {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
     text-align: center;
-    min-width: 250px;
-    background-color: #292929;
-    border-radius: 6px;
+    font-size: 16px;
+    color: black;
 }
 
-.Conteudos-FGB p, .Conteudos-IF p {
-    text-align: left;
-    font-size: 1.25rem;
-    color: var(--text-color);
+.nota-tecla-preta{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: white;
 }
 
-.Links {
-    margin-top: 2rem;
+.C {
+    left: 0;
 }
 
-.Github a {
-    display: inline-block;
-    margin-bottom: 10px;
-    color: var(--primary-color);
+.C-sharp {
+    left: 45px;
+}
+
+.D {
+    left: 60px;
+}
+
+.D-sharp {
+    left: 105px;
+}
+
+.E {
+    left: 120px;
+}
+
+.F {
+    left: 180px
+}
+
+.F-sharp {
+    left: 225px;
+}
+
+.G {
+    left: 240px
+}
+
+.G-sharp {
+    left: 285px;
+}
+
+.A {
+    left: 300px
+}
+
+.A-sharp {
+    left: 345px;
+}
+
+.B {
+    left: 360px
+}
+
+.para-direita-1 .key {
+    transform: translateX(420px);
+}
+
+.para-direita-2 .key {
+    transform: translateX(840px);
 }
 
 footer {
@@ -91,41 +128,3 @@ footer {
     border-top: 1px solid var(--border-color);
     border-radius: 6px;
 }
-
-address {
-    font-style: normal;
-    line-height: 1.5;
-}
-
-.container-tabela {
-  width: 100%;
-  overflow-x: auto;
-}
-
-table {
-  border-collapse: collapse;
-  border: 1px solid var(--primary-color);
-  border-radius: 8px;
-  font-family: sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  margin: 0 auto;
-}
-
-caption {
-  caption-side: top;
-  padding: 10px;
-  font-weight: bold;
-}
-
-thead, tbody {
-  background-color: #292929;
-}
-
-th, td {
-  border: 1px solid var(--primary-color);
-  padding: 8px 10px;
-  white-space: nowrap;
-}
-
-
